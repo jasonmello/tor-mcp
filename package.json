@@ -20,8 +20,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "docs:check": "node scripts/check-docs.mjs",
-    "prepublishOnly": "npm run build",
-    "test:integration": "TOR_IT=1 vitest run test/integration.test.ts"
+    "test:integration": "TOR_IT=1 vitest run test/integration.test.ts",
+    "prepack": "npm run build"
   },
   "keywords": [
     "mcp",

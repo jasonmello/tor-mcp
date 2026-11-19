@@ -16,6 +16,8 @@ MCP server (TypeScript, stdio) that runs a private Tor process and exposes brows
 ## Commands
 `npm install` · `npm test` · `npm run test:integration` (real Tor, network) · `npm run typecheck` · `npm run docs:check` · `npm run build` · `npm run dev`
 
+Release: bump `version` in `package.json` (the server reads it from there), then `npm publish` (`prepack` builds `dist`).
+
 ## Rules that don't break
 - All traffic goes through Tor, DNS included. Never add a code path that connects directly.
 - Never run a downloaded tor without the pinned hash matching. Updating Tor = update `TOR_BUNDLE_VERSION` and every hash in `src/tor/bundle.ts` from the official `sha256sums-signed-build.txt`.
