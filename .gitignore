@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+tor-mcp-archive/
+.env*
+!.env.example
+*.key
+*.pem
+*.p12
+.DS_Store

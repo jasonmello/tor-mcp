@@ -1,0 +1,61 @@
+{
+  "name": "tor-mcp",
+  "version": "0.1.0",
+  "description": "Let Claude Code and Codex browse through Tor: open .onion sites, hide your IP from the sites your agent visits, and archive pages with hashes for reporting.",
+  "type": "module",
+  "bin": {
+    "tor-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "docs:check": "node scripts/check-docs.mjs",
+    "prepublishOnly": "npm run build",
+    "test:integration": "TOR_IT=1 vitest run test/integration.test.ts"
+  },
+  "keywords": [
+    "mcp",
+    "tor",
+    "onion",
+    "claude",
+    "codex",
+    "privacy",
+    "journalism",
+    "osint"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@mozilla/readability": "^0.6.0",
+    "linkedom": "^0.18.15",
+    "playwright-core": "^1.65.1",
+    "socks-proxy-agent": "^10.1.0",
+    "turndown": "^7.2.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/turndown": "^5.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonmello/tor-mcp.git"
+  },
+  "homepage": "https://github.com/jasonmello/tor-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/jasonmello/tor-mcp/issues"
+  }
+}
