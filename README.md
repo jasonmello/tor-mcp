@@ -91,4 +91,4 @@ See [docs/arquitetura.md](docs/arquitetura.md) for how the pieces fit together.
 
 ## License
 
-MIT
+Apache 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
