@@ -7,3 +7,4 @@
 - **2026-11-19 · Public docs in English** (with a Portuguese README summary) to reach a global audience.
 - **2026-11-19 · Re-sign the macOS bundle ad hoc after the hash check.** The expert bundle's `tor` has a signature macOS rejects (SIGKILL on launch); the hash check already proves it's the official file.
 - **2026-11-19 · No `--disable-features` flag in Chromium.** It overrides Playwright's own list and Chrome then blocks .onion with ERR_BLOCKED_BY_CLIENT.
+- **2026-11-20 · Apache 2.0 instead of MIT.** Same freedom to use, plus a patent grant, no rights to the project name, and a NOTICE file that forks must keep (credit to the author).
