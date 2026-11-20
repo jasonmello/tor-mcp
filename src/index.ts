@@ -2,6 +2,7 @@
 // tor-mcp: an MCP server that gives Claude Code, Codex and other MCP clients a
 // browser that goes through Tor. Tor starts on the first tool call and is torn
 // down (with its temp data) when the client disconnects.
+import { createRequire } from "node:module";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -11,7 +12,7 @@ import { extractHtml } from "./extract.js";
 import { assertWebUrl, isOnion, isTextual, torGet } from "./fetch.js";
 import { startTor, type TorInstance } from "./tor/launcher.js";
 
-export const VERSION = "0.1.0";
+export const VERSION: string = (createRequire(import.meta.url)("../package.json") as { version: string }).version;
 
 const log = (msg: string) => process.stderr.write(`[tor-mcp] ${msg}\n`);
 
